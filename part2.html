@@ -1,41 +1,175 @@
 <style>
-  header {
-    background-color: hsl(180, 90%, 35%);
-    color: #FFFFFF;
-  }
+      /*Use the image at the following url as the webpage background image*/
+      body {
+        background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+    }
+    
+    header {
+      background: linear-gradient(120deg,hsl(180, 80%, 25%),#FFCCCC);
+      color: #FFFFFF;
+    }
+  
+    nav {
+      background:linear-gradient(120deg,hsl(180, 80%, 25%),#FFCCCC);
+    }
+  
+    h1 {
+      text-indent: 10px;
+      padding-top: 10px;
+    }
+  
+    nav ul {
+      margin: 0px;
+      padding: 5px 0px 5px 30px;
+    }
+  
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  nav {
-    background-color: hsl(180, 80%, 25%);
-  }
+    div:hover{
+        transform: scale(1.1)
+    }
 
-  h1 {
-    text-indent: 10px;
-    padding-top: 10px;
-  }
+    .stripes{
+        /*border-radius rounds the edges*/ 
+        border-radius: 20px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: repeating-linear-gradient(
+            45deg,
+            yellow 0px,
+            yellow 40px,
+            black 40px,
+            red 80px
+    );
+    }
 
-  nav ul {
-    margin: 0px;
-    padding: 5px 0px 5px 30px;
-  }
+    .moon{
+        /*margin: auto centers the div*/
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background: repeating-linear-gradient(
+            45deg,
+            yellow 0px,
+            yellow 40px,
+            black 40px,
+            red 80px
+        );
+        border-radius: 50px;
+        box-shadow: 10px 10px 0px 0px black;
+    }
 
-  nav li {
-    display: inline;
-    margin-right: 20px;
-  }
+    .animate{
+        width: 100px;
+        height: 100px;
+        background: black;
+        margin: auto;
+        border-radius: 50px;
+     }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-</style>
+     .animate:hover{
+        animation-name: rainbow;
+        animation-duration: 4s;
+     }
 
-<header>
-  <h1>Cooking with FCC!</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Classes</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+     @keyframes rainbow {
+        0% {
+            background-color: blue;
+        }
+        50% {
+            background-color: green;
+        }
+        100% {
+            background-color: yellow;
+        }
+        }
+
+    #small{
+        transform: scale(.5);
+    }
+
+    #skew{
+        transform: skewX(-32deg);
+        transform: skewY(-10deg);
+    }
+
+    .love{
+        font-style: italic
+    }
+
+    .love::after{
+        /*content is a required field for before and after*/
+        content: "♥";
+    }
+
+  </style>
+  
+  <header>
+    <h1>Visual Design Notes Part 2</h1>
+    <nav>
+      <ul>
+        <li><a href="#">In-line</a></li>
+        <li><a href="#">links</a></li>
+        <li><a href="#">via CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+
+    <p class=love>
+        This text uses ::after to include a cute symbol at the end.
+    </p>
+
+    <p>
+        Divider colored using a repeating linear gradient. Hover to make bigger.
+    </p>
+
+    <div class=stripes>
+
+    </div>
+    <p>
+        Divider scaled to 50% size
+    </p>
+
+    <div class=stripes id=small>
+
+    </div>
+
+    <p>
+        Divider skewed
+    </p>
+
+    <div class=stripes id=skew>
+
+    </div>
+
+    <p>
+        Divider with a box-shadow, centered using auto margin
+    </p>
+
+    <div class=moon>
+
+    </div>
+
+    <p>
+        Hover to see animated colors
+    </p>
+
+    <div class=animate>
+
+    </div>
+
+  </body>
