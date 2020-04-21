@@ -4,6 +4,7 @@
         background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
     }
     
+    /*Use a gradient between two colors for the header background*/
     header {
       background: linear-gradient(120deg,hsl(180, 80%, 25%),#FFCCCC);
       color: #FFFFFF;
@@ -23,20 +24,24 @@
       padding: 5px 0px 5px 30px;
     }
   
+    /*display navigation list items in one line rather than on separate lines*/
     nav li {
       display: inline;
       margin-right: 20px;
     }
   
+    /*set links to the default text color and don't do anything when you hover over them*/
     a {
       text-decoration: none;
       color: inherit;
     }
 
+    /*make dividers larger when you hover over them (unless they already have a transform)*/
     div:hover{
         transform: scale(1.1)
     }
 
+    /*Create a class for round dividers with a striped background*/
     .stripes{
         /*border-radius rounds the edges*/ 
         border-radius: 20px;
@@ -55,6 +60,7 @@
     );
     }
 
+    /*Create a class for a striped circle with a box shadow*/
     .moon{
         /*margin: auto centers the div*/
         margin: auto;
@@ -71,6 +77,7 @@
         box-shadow: 10px 10px 0px 0px black;
     }
 
+    /*define the characteristics of a black circle that will be animated*/
     .animate{
         width: 100px;
         height: 100px;
@@ -79,11 +86,13 @@
         border-radius: 50px;
      }
 
+     /*create an animation named rainbow that lasts 4 seccods*/
      .animate:hover{
         animation-name: rainbow;
         animation-duration: 4s;
      }
 
+     /*animate the tradnsition between three colors at three points in the animation*/
      @keyframes rainbow {
         0% {
             background-color: blue;
@@ -96,19 +105,23 @@
         }
         }
 
+    /*Shrink object with the small ID*/
     #small{
         transform: scale(.5);
     }
 
+    /*Skew object with the skew ID*/
     #skew{
         transform: skewX(-32deg);
         transform: skewY(-10deg);
     }
 
+    /*Create a class that italicizes text*/
     .love{
         font-style: italic
     }
 
+    /*Add a heart symbol after any text using the "love" class*/
     .love::after{
         /*content is a required field for before and after*/
         content: "♥";
