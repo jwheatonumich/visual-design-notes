@@ -90,6 +90,8 @@
      .animate:hover{
         animation-name: rainbow;
         animation-duration: 4s;
+        /*keeps the animation on the final frame instead of reverting to black*/
+        animation-fill-mode: forwards;
      }
 
      /*animate the tradnsition between three colors at three points in the animation*/
@@ -124,7 +126,7 @@
     /*Add a heart symbol after any text using the "love" class*/
     .love::after{
         /*content is a required field for before and after*/
-        content: "♥!";
+        content: "♥";
     }
 
   </style>
