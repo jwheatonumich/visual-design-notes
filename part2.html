@@ -77,36 +77,6 @@
         box-shadow: 10px 10px 0px 0px black;
     }
 
-    /*define the characteristics of a black circle that will be animated*/
-    .animate{
-        width: 100px;
-        height: 100px;
-        background: black;
-        margin: auto;
-        border-radius: 50px;
-     }
-
-     /*create an animation named rainbow that lasts 4 seccods*/
-     .animate:hover{
-        animation-name: rainbow;
-        animation-duration: 4s;
-        /*keeps the animation on the final frame instead of reverting to black*/
-        animation-fill-mode: forwards;
-     }
-
-     /*animate the tradnsition between three colors at three points in the animation*/
-     @keyframes rainbow {
-        0% {
-            background-color: blue;
-        }
-        50% {
-            background-color: green;
-        }
-        100% {
-            background-color: yellow;
-        }
-        }
-
     /*Shrink object with the small ID*/
     #small{
         transform: scale(.5);
@@ -176,14 +146,6 @@
     </p>
 
     <div class=moon>
-
-    </div>
-
-    <p>
-        Hover to see animated colors
-    </p>
-
-    <div class=animate>
 
     </div>
 

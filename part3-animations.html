@@ -1,0 +1,53 @@
+<style>
+
+/*define the characteristics of a black circle that will be animated*/
+.animate{
+        width: 100px;
+        height: 100px;
+        background: black;
+        margin: auto;
+        border-radius: 50px;
+     }
+
+     /*create an animation named rainbow that lasts 4 seccods*/
+     .animate:hover{
+        animation-name: rainbow;
+        animation-duration: 4s;
+        /*keeps the animation on the final frame instead of reverting to black*/
+        animation-fill-mode: forwards;
+     }
+
+     /*animate the tradnsition between three colors at three points in the animation*/
+     @keyframes rainbow {
+        0% {
+            background-color: blue;
+        }
+        50% {
+            background-color: green;
+        }
+        100% {
+            background-color: yellow;
+        }
+        }
+
+</style>
+
+<h2>
+    
+    Visual Design Notes Part 2
+
+</h2>
+
+<h3>
+
+    Animations
+    
+</h3>
+
+<p>
+    Hover to see animated colors
+</p>
+
+<div class=animate>
+
+</div>
